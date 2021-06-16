@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body onload="loadAgeSelector()">
+<select id="yearselect"></select>
+<script>
+function loadAgeSelector()
+{
+    var data=['Id', 'OwnerId', 'IsDeleted', 'Name', 'CreatedDate', 'CreatedById', 'LastModifiedDate', 'LastModifiedById', 'SystemModstamp', 'LastActivityDate', 'LastViewedDate', 'LastReferencedDate',
+'Physician__c', 'Hospital__c', 'Hospital_Name__c'];
+var endyear = data.length;
+for (var i = 0;i<=endyear;i++){
+    node=document.createElement("Option");
+    textnode=document.createTextNode(data[i]);
+    node.appendChild(textnode);
+    document.getElementById("yearselect").appendChild(node);
+}
+}
+</script>
+</body>
+</html>
